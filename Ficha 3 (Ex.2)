@@ -1,1 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float num1;
+    float num2;
+    float num3;
+
+    printf("Digite um medida 1: ");
+    scanf("%f",&num1);
+    fflush(stdin);
+
+    printf("Digite a medida 2: ");
+    scanf("%f",&num2);
+    fflush(stdin);
+
+    printf("Digite a medida 3: ");
+    scanf("%f",&num3);
+
+    /* Testar se é Triângulo */
+
+    if( (fabs(num1 - num2) < num3) && ((num3<(num1+num2))))
+        printf("E um triangulo do tipo:\n");
+    else
+        printf("Nao e um triangulo!");
+
+    /* Descobrir o tipo de triangulo*/
+
+    if(num1==num2 && num2==num3)
+        printf("Equilatero");
+    else
+        if(num1==num2 && num2!=num3)
+            printf("Isosceles");
+        else
+            if(num2==num3 && num3!=num1)
+                printf("Isosceles");
+            else
+                if(num1!=num2 && num1!=num3 && num2!=num3)
+                    printf("Escaleno");
+
+    return 0;
+}
 
