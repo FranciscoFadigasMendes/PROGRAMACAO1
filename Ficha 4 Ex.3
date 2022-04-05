@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    int alturamax=0,alturamin=2000,total=0,soma=0; /*Inicar Contadores*/
+    int altura;
+    float media
+
+   while(altura>0){
+    printf("Digite a altura do atleta, ou digite 0 para terminar:\n");
+    scanf("%d",&altura);
+
+    if(altura>0)
+        total=total+1;
+        soma=soma+altura;
+
+        if(altura>alturamax)
+            alturamax=altura;
+
+        if(altura<alturamin)
+            alturamin=altura;
+
+        media=(float)soma/total;
+   }
+    printf("A media de alturas e:%f\n",media);
+    printf("A altura max e:%d\n",alturamax);
+    printf("A altura min e:%d\n",alturamin);
+
+ return 0;
+
+}
