@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Elabore um programa que solicite ao utilizador um valor inteiro, garanta que este é positivo e calcule
+a soma dos números inteiros desde 1 até ao valor lido.
+Nota: A implementação da soma deve ser feita de três formas, recorrendo respectivamente à
+estrutura de repetição while, for e do … while.*/
+
+int main()
+{
+   int num,soma;
+
+   soma=0;
+
+
+
+    printf("Digite um numero inteiro:\n\n\n");
+    scanf("%d",&num);
+        if(num>0){
+
+        while(num>1){
+            soma = num + (num-1);
+            num--;
+        }
+
+        printf("A soma e:%d",soma);
+        
+        
+        }
+        else
+            printf("O numero nao e positivo");
+
+    return 0;
+}
