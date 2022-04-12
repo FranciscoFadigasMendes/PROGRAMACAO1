@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Elabore um programa que solicite ao utilizador um número inteiro positivo e que calcule a soma dos
+seus dígitos. Por exemplo se o nº for 524 a soma dos seus dígitos será 5 + 2 + 4 = 11.
+Sugestão: Os dígitos de um número podem ser obtidos efectuando divisões sucessivas por 10. */
+
+int main()
+{
+    int num,m,soma;
+
+    printf("Digite um numero inteiro e positivo:\n\n");
+    scanf("%d",&num);
+    if(num>0){
+
+    while(num>0)
+
+        {
+    m=num%10;
+    soma=soma+m;
+    num=num/10;
+        }
+    printf("Sum is=%d",soma);
+
+    }else
+
+    return 0;
+}
