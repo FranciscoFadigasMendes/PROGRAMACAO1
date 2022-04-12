@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char ordem;
+    int num1,num2,num3;
+    int maior,numero,menor;
+
+    printf("Digite 3 numeros:\n");
+    printf("\nNumero 1:\n");
+    scanf("%d",&num1);
+    printf("Numero 2:\n");
+    scanf("%d",&num2);
+    printf("Numero 3:\n");
+    scanf("%d",&num3);
+    printf("Pretende mostra-los por ordem crescente ou decrescente?");
+    printf("\nPara crescente digite 'c', para decrescente digite 'd':\n");
+    scanf("%c",ordem);
+
+    switch(ordem){
+        case 'c':
+                if(num1>num2>num3 || num1>num3>num2)
+                    maior=num1;
+                    printf("O maior é : &maior",num1);
+
+            break;
+
+        case 'd':
+            printf("");
+
+            break;
+
+    }
+    return 0;
+}
