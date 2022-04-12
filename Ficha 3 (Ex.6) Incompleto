@@ -3,23 +3,19 @@
 
 int main()
 {
-    char ordem,c,d;
+    int ordem;
     int num1,num2,num3;
 
     printf("Digite 3 numeros:\n");
     printf("\nNumero 1:\n");
-    fflush(stdin);
     scanf("%d",&num1);
     printf("Numero 2:\n");
-    fflush(stdin);
     scanf("%d",&num2);
     printf("Numero 3:\n");
-    fflush(stdin);
     scanf("%d",&num3);
     printf("Pretende mostra-los por ordem crescente ou decrescente?");
     printf("\nPara crescente digite 'c', para decrescente digite 'd':\n\n\n");
-    fflush(stdin);
-    scanf("%c",&ordem);
+    scanf("%d",&ordem);
 
     switch(ordem){
         case 'c':
