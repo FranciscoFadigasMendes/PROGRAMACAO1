@@ -16,6 +16,7 @@ scanf("%d",&l1);
 printf("Lado 2: ");
 scanf("%d",&l2);
 printf("\n\n");
+
 /*Enunciar a função area*/
 area = calc_area(l1,l2);
 printf("Area = %d \n",area);
