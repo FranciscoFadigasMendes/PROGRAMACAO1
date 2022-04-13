@@ -1,0 +1,95 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+/*------------------------------Protótipos---------------------------------*/
+int soma(int n1,int n2);
+int subtracao(int n1,int n2);
+int raizn1(int n1);
+int raizn2(int n2);
+int potencia(int n1,int n2);
+int array[5];
+
+/*------------------------------Variáveis---------------------------------*/
+int n1,n2;
+int SOMA,SUBTRACAO,RAIZ1,RAIZ2,POTENCIA;
+
+/*----------------------------Função Main--------------------------------------*/
+
+int main()
+{
+   printf("Digite N1: ");
+   scanf("%d",&n1);
+   printf("Digite N2: ");
+   scanf("%d",&n2);
+   printf("\n\n");
+
+    soma(n1,n2); /*Chamar a função*/
+        SOMA=array[0];
+            printf("\nSoma=%d\n",SOMA);
+
+    subtracao(n1,n2);/*Chamar a função*/
+        SUBTRACAO=array[1];
+        p   rintf("\nSubtracao=%d\n",SUBTRACAO);
+
+    raizn1(n1,n2);/*Chamar a função*/
+        RAIZ1=array[2];
+            printf("\nRaiz de N1=%d\n",RAIZ1);
+
+    raizn2(n1,n2);/*Chamar a função*/
+        RAIZ2=array[3];
+            printf("\nRaiz de N2=%d\n",RAIZ2);
+
+    potencia(n1,n2);/*Chamar a função*/
+        POTENCIA=array[4];
+            printf("\nPotencida de N1 por N2=%d\n",POTENCIA);
+
+
+    return 0;
+}
+/*------------------------Funcoes Secundarias(1)---------------------------------*/
+int soma(int n1,int n2)
+{
+  int v0;
+  v0=(n1+n2);
+  array[0]=v0;
+
+    return array[0];
+}
+
+/*------------------------Funcoes Secundarias(2)---------------------------------*/
+int subtracao(int n1,int n2)
+{
+  int v1;
+  v1=n1-n2;
+  array[1]=v1;
+
+    return array[1];
+}
+
+/*------------------------Funcoes Secundarias(3)---------------------------------*/
+int raizn1(int n1)
+{
+  int v2;
+  v2=n1*n1;
+
+
+    return array[2];
+}
+
+int raizn2(int n1)
+{
+  int v3;
+  v3=n2*n2;
+  array[3]=v3;
+
+    return array[3];
+}
+/*------------------------Funcoes Secundarias(4)---------------------------------*/
+
+int potencia(int n1,int n2)
+{
+  int v4;
+  v4=n1+n2;
+ /*por fazer nao ligues À potencia*/
+    return array[4];
+}
