@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int h,m,s,a,S,N;
+int seg,Total,Resposta;
+int resposta[1];
+
+int ler_num (int h, int m,int s);
+long int converte_para_segundos(int h, int m, int s);
+
+/*------------------------------Funcao Main--------------------------------------*/
+
+int main()
+{
+    printf("Digite as horas: \n");
+    scanf("%d,",&h);
+    printf("Digite os minutos: \n");
+    scanf("%d,",&m);
+    printf("Digite os segundos: \n");
+    scanf("%d,",&s);
+
+        do{
+            Resposta=ler_num(h,m,s);
+
+            if(resposta[0]=0){
+                printf("\nHoras inseridas nao sao validas\n");
+                break;}
+            else
+                if(resposta[0]=1)
+                    printf("\nHoras Inseridas Aceites\n");
+                else
+                    if(resposta[0]!=0 || resposta[0]!=1){
+                        printf("\nDeu merda\n");
+                        break;}
+
+            }
+
+            while(0);
+
+    printf("\nresposta[0]=%d\n",resposta[0]);/*Mostra o output do vetor*/
+
+    Total=converte_para_segundos(h,m,s);
+        printf("\nTotal de segundos: %d\n",Total);
+
+    return 0;
+}
+/*------------------------Funcoes Secundarias(1)---------------------------------*/
+
+int ler_num (int h, int m,int s)
+{
+    if(h>23)
+        resposta[0]=0;
+    else
+        if(m>59)
+            resposta[0]=0;
+        else
+            if(s>59)
+                resposta[0]=0;
+            else
+                if(h<=23 || m<=59 || s<=59)
+                    resposta[0]=1;
+
+}
+
+/*------------------------Funcoes Secundarias(2)---------------------------------*/
+
+long int converte_para_segundos(int h, int m, int s)
+{
+    seg=(h*60*60)+(m*60)+(s);
+    return seg;
+}
