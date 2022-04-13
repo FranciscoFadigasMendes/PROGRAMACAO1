@@ -1,1 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*.1 Defina as funções de nomes funcao1 e funcao2, que apresentam respectivamente no ecrã as
+mensagens Estou na funcao 1 e Estou na funcao 2. 1.2 Usando (chamando) as funções definidas anteriormente, implemente a função main() de forma
+a que seja escrito no ecrã o seguinte texto: */
+
+
+void funcao1()
+{
+   printf("Estou na funcao 1\n\n");
+}
+
+void funcao2()
+{
+    printf("Estou na funcao 2\n\n");
+}
+
+int main()
+{
+printf("Inicio da funcao main\n\n");
+funcao1();
+printf("Estou entre as funcoess 1 e 2\n\n");
+funcao2();
+printf("Fim da funcao main\n\n");
+    return 0;
+}
+
 
