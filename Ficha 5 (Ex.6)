@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define PI 3,1415
+
+int ler_num(int num);
+int area(int raio);
+int perimetro(int raio);
+int volume(int raio);
+
+int num,raio,Area,Volume,Perimetro;
+/*-------------------------------------------*/
+int main()
+{
+    printf("Digite o raio da circunferencia: ");
+    scanf("%d",&num);
+
+    raio = ler_num(num);
+
+    Area = area(raio);
+    printf("\nA area e = %d ",Area);
+
+    Perimetro = perimetro(raio);
+    printf("\nO perimetro e = %d ",Perimetro);
+
+    Volume = volume(raio);
+    printf("\nO volume e = %d \n\n",Volume);
+
+
+    return 0;
+}
+
+/*--------------------------------------------*/
+
+int ler_num(int num)
+{
+    if(num>=0)
+        return num;
+        else
+            return num*-1;
+
+}
+
+
+int area(int raio)
+{
+    int area;
+    area = 0;
+    area = raio * raio * PI ;
+    return area;
+
+}
+
+
+int perimetro(int raio)
+{
+  int perimetro;
+  perimetro = 0;
+  perimetro = 2 * PI * raio;
+  return perimetro;
+
+}
+
+
+int volume(int raio)
+{
+   int volume;
+   volume = 0;
+   volume = (4/3) * PI * raio * raio * raio;
+   return volume;
+
+}
