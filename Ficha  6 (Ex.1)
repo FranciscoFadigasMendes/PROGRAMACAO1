@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float nota,notas[59],avaliacao;
+float nota,notas[],media,soma;
 int numalunos,i;
 int vetor[];
 
 void armazenar_notas();
 void mostrar_notas();
+void calcular_media();
+void mostrar_notas_positivas();
 
 /*---------------------------------------*/
 int main()
@@ -17,6 +19,7 @@ int main()
 
     armazenar_notas();
     mostrar_notas();
+    calcular_media();
 
    }while(i<numalunos);
 
@@ -43,3 +46,24 @@ for(i=0;i<numalunos;i++)
      printf("Nota Aluno %d :%.2f\n",i+1,notas[i]);
  }
 /*---------------------------------------*/
+void calcular_media()
+{
+   for(i=0;i<numalunos;i++)
+   {
+     soma = soma + notas[i];
+
+   if(i == numalunos-1 ){
+   media = (soma/numalunos);
+   printf("\nA media das notas e = %.2f\n",media);
+   }
+   }
+}
+/*---------------------------------------*/
+void mostrar_notas_positivas();
+{
+    for(i=0;i<numalunos;i++)
+    {
+        if( notas[i]>10)
+            printf("nota[i]",i)
+    }
+}
