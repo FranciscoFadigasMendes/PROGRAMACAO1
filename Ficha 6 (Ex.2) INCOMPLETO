@@ -2,15 +2,17 @@
 #include <stdlib.h>
 #include <ctype.h>
 char string_de_teste[31];
-void maiusculas();
+void maiusculas(char string_de_teste[31],int nconv);
+char string[28];
+void inverte(char string[28],int nconv);
 /*---------------------------------------*/
 int main()
 {
 
   int nconv=0;
-  char string_de_teste[31];
 
   maiusculas(string_de_teste,nconv);
+  inverte(string,nconv,a);
 
     return 0;
 }
@@ -20,7 +22,7 @@ void maiusculas(char string_de_teste[31],int nconv)
 {
     int i;
 
-    printf("Escreva a palavra: ");
+    printf("Escreva a palavra para meter vogais maiusculas: ");
     fflush(stdin);
     gets(string_de_teste);
 
@@ -34,4 +36,20 @@ void maiusculas(char string_de_teste[31],int nconv)
             puts(string_de_teste);
             printf("\nO numero de conversoes foram: %d",nconv);
 }
+/*---------------------------------------*/
+void inverte(char string[28],int nconv,int a)
+{
+    int a;
+    printf("Escreva a palavra para inverter: ");
+    fflush(stdin);
+    gets(string);
 
+    for(i=0;i<28;i++)
+        {
+        a = int strlen( char string[28]);
+        }
+        printf("--%d--",a);
+        printf("\nO resultado com as letras invertidas: ");
+        puts(string_de_teste);}
+
+}
