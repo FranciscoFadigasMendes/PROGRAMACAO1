@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float nota,notas[],media,soma;
+float nota,notas[],media,soma,melhor;
 int numalunos,i;
 int vetor[];
 
@@ -9,6 +9,7 @@ void armazenar_notas();
 void mostrar_notas();
 void calcular_media();
 void mostrar_notas_positivas();
+void nota_mais_alta();
 
 /*---------------------------------------*/
 int main()
@@ -20,8 +21,10 @@ int main()
     armazenar_notas();
     mostrar_notas();
     calcular_media();
-
-   }while(i<numalunos);
+    mostrar_notas_positivas();
+    nota_mais_alta();
+   }
+   while(i<numalunos);
 
 
 
@@ -59,11 +62,25 @@ void calcular_media()
    }
 }
 /*---------------------------------------*/
-void mostrar_notas_positivas();
+void mostrar_notas_positivas()
 {
     for(i=0;i<numalunos;i++)
     {
-        if( notas[i]>10)
-            printf("nota[i]",i)
+        if( notas[i]>=10)
+            printf("Nota Positivas: %.2f\n",notas[i]);
+
     }
 }
+/*---------------------------------------*/
+void nota_mais_alta()
+{
+    for(i=0;i<numalunos;i++)
+    {
+        melhor=0;
+
+        if(notas[i]>melhor)
+            melhor=notas[i];
+    }
+    printf("\nA melhor nota e: %.2f",melhor);
+}
+
