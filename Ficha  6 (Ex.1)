@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float nota,notas[59],avaliacao;
+int numalunos,i;
+int vetor[];
+
+void armazenar_notas();
+void mostrar_notas();
+
+/*---------------------------------------*/
+int main()
+{
+   do{
+    printf("Digite o numero de alunos:");
+    scanf("%d",&numalunos);
+
+    armazenar_notas();
+    mostrar_notas();
+
+   }while(i<numalunos);
+
+
+
+    return 0;
+}
+/*---------------------------------------*/
+/*---------------------------------------*/
+
+void armazenar_notas()
+{
+for(i=0;i<numalunos;i++)
+    {
+        printf("Nota do aluno:%d____",i+1);
+        scanf("%f",&notas[i]);
+
+    }
+}
+/*---------------------------------------*/
+ void mostrar_notas()
+ {
+    for(i=0;i<numalunos;i++)
+     printf("Nota Aluno %d :%.2f\n",i+1,notas[i]);
+ }
+/*---------------------------------------*/
