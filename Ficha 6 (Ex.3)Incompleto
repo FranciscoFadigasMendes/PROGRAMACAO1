@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*O clube de atletismo de Leiria pretende organizar um campeonato no qual participarão NR_ATLETAS
+atletas. O campeonato é composto por um conjunto de NR_CORRIDAS corridas.
+Pretende-se que elabore um programa que auxilie o clube no registo dos tempos (em segundos) que
+cada um dos atletas levou em cada uma das corridas e na elaboração de algumas estatísticas.
+
+a) Declare a estrutura de dados (matriz de reais) que permita armazenar os tempos que cada atleta
+levou em cada uma das corridas.
+b) Declare outra estrutura de dados para conter os nomes de NR_ATLETAS. O nome poderá ter, no
+máximo, 80 caracteres.
+c) Defina a função ler_tempo, que peça ao utilizador e guarde nessa estrutura o tempo de um atleta,
+numa determinada corrida. Deve ser pedido ao utilizador o número do atleta e o seu tempo.
+d) Defina a função ler_nomes, que peça ao utilizador os nomes de todos os atletas e os guarde
+(mesmo não participando em qualquer corrida).
+e) Elabore a função listar, que liste no monitor, um por linha, os tempos de todos os atletas
+(imprimirá em NR_CORRIDAS linhas) no seguinte formato por linha:
+<número do atleta> <o seu nome> <respectivo tempo>
+f) Elabore a função vencedor_corrida, que mostre o nome do atleta vencedor de uma determinada
+corrida e respectivo tempo, bem como a média dos tempos dessa corrida. Apoie-se no algoritmo
+desenvolvido no exercício 4 da Folha #1 (Algoritmos).
+g) Integre as funções anteriores de modo a que a função ler_tempo seja chamada, repetidamente,
+na função main, enquanto o utilizador quiser inserir tempos.
+h) Elabore a função vencedor_campeonato, que mostra o vencedor do campeonato. O vencedor é
+o atleta com a menor média de tempos em todas as corridas. */
+/*-----------------------------------------------------------------------------------------------*/
+#define NR_Atletas 5
+#define NR_Tempos 5
+
+void ler_temp(tabela_tempos[NR_Atletas][NR_Tempos]);
+
+int main()
+{
+    float tabela_tempos [NR_Atletas][NR_Tempos];
+    return 0;
+}
+
+//-------------------------------------------------------------------------------------------------
+//Funcões Secundárias
+
+
+ void ler_temp(tabela_tempos[NR_Atletas][NR_Tempos])
+ {
+     
+    float tempo;
+    int i;
+
+    for(i=0;i<=NR_Atletas;i++){
+    printf("Digite o tempo do atleta numero %d",i)
+    fflush(stdin);
+    scanf("%f",tempo);
+
+    if(tempo>0)
+        tabela_tempos[i][i+1]=tempo;
+        else
+            printf("Numero Inválido");
+
+
+    }
+}
