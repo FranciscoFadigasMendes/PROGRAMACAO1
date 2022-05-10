@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 3
+
+void soma(int vetor_10p[MAX]);
+void criacaovetor(int vetor_10p[MAX]);
+
+int main()
+{
+    int vetor_10p[MAX];
+
+    criacaovetor(vetor_10p);
+    soma(vetor_10p);
+
+    return 0;
+}
+//-------Funções Secundárias--------------
+
+void criacaovetor(int vetor_10p[MAX])
+{
+    int i,num;
+
+    for(i=0;i<MAX;i++){
+        printf("Digite um numero inteiro para colocar na posicao [%d] do vetor: ",i);
+        fflush(stdin);
+        scanf("%d",&num);
+        vetor_10p[i]=num;}
+
+    printf("\nO vetor criado e:");
+        for(i=0;i<MAX;i++){
+            printf("\nPosicao [%d] = %d",i,vetor_10p[i]);
+
+    }
+}
+//-----------------------------------------------------
+
+void soma(int vetor_10p[MAX])
+{
+    int x,y;
+
+    do{
+        printf("\n\nInsira a posicao X:");
+        fflush(stdin);
+        scanf("%d",&x);
+
+        if(x<0 || x>9)
+            printf("Numero Invalido");
+    }
+    while(x<0 || x>9);
+
+   do{
+        printf("\nInsira a posicao Y:");
+        fflush(stdin);
+        scanf("%d",&y);
+
+        if(x<0 || x>9)
+            printf("Numero Invalido");
+    }
+    while(x<0 || x>9);
+
+    printf("\nPosicao X:%d || Posicao Y:%d",x,y);
+    printf("\n\nA soma e: %d\n\n\n\n\n\n\n",vetor_10p[x]+vetor_10p[y]);
+}
